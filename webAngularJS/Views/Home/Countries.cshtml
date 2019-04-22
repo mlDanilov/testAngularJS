@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="cntrsApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contries</title>
+</head>
+<body>
+    <div ng-controller="countriesController"> 
+        <ul>
+            <li ng-repeat="country in Countries">
+                <b>{{country.Name}}</b>
+                <p>{{country.Capital}}</p>
+                <p>{{country.Population}}</p>
+                <p>{{country.Area}} км2</p>
+            </li>
+        </ul>
+
+    </div>
+    <script src="~/app/js/lib/angular.min.js"></script>
+    <script src="~/app/js/controller/countries.js"></script>
+</body>
+</html>

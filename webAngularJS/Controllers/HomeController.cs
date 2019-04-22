@@ -15,6 +15,11 @@ namespace webAngularJS.Controllers
         }
 
 
+        public ActionResult Countries()
+        {
+            return View();
+        }
+
         public ActionResult Redirect(int? number_ = null)
         {
             if (number_ == 0)

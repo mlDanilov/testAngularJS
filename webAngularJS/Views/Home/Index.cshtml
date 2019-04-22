@@ -5,13 +5,15 @@
 
 <!DOCTYPE html>
 
-<html ng-app="myApp">
+<html ng-app="cntrsApp">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <script src="~/app/js/lib/angular.min.js"></script>
+    <script src="~/app/js/controller/countries.js"></script>
 </head>
-<body>
-    <div ng-controller="myController"> 
+<body ng-controller="countriesController">
+    <div> 
         <input type="text" ng-model="testText" placeholder="Введите имя"/>
         <h1>Добро пожаловать {{testText}}</h1>
         <h2>Таймер: {{counterValue}}</h2>
@@ -24,7 +26,6 @@
             @Html.ActionLink("Другой вид", "Redirect");
         </div>
     </div>
-    <script src="~/app/js/lib/angular.min.js"></script>
-    <script src="~/app/js/model.js"></script>
+   
 </body>
 </html>
