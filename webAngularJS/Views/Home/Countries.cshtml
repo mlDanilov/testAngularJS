@@ -8,19 +8,59 @@
 <html >
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Contries</title>
+    <title>Countries</title>
 </head>
 <body ng-app="countriesApp">
     <div ng-controller="countriesController"> 
-        <ul>
-            <li ng-repeat="country in Countries">
-                <b>{{country.Name}}</b>
-                <p>{{country.Capital}}</p>
-                <p>{{country.Population}}</p>
-                <p>{{country.Area}} км2</p>
-            </li>
-        </ul>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Код</td>
+                        <td>Название</td>
+                        <td>Столица</td>
+                        <td>Население</td>
+                        <td>Площадь, км2</td>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td>
+                           {{Value}} 
+                        </td>
+                        <td>
+                            <button ng-click="Plus()">+</button>
+                        </td>
+                        <td>
+                            <button ng-click="Minus()">-</button>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr ng-repeat="country in Countries">
+                        <td>{{country.Id}}</td>
+                        <td>{{country.Name}}</td>
+                        <td>{{country.Capital}}</td>
+                        <td>{{country.Population}}</td>
+                        <td>{{country.Area}}</td>
+                    </tr>
+                </tbody>
+             
 
+            </table>
+        </div>
+        <div>
+            <button ng-click="DeleteFirstCountry()">Удалить</button>
+        </div>
+
+    </div>
+    <div ng-controller="countriesController">
+        <div ng-bind="GetCountOfCountries()"></div>
+        <div>
+            {{Value}}
+            <button ng-click="Plus()">+</button>
+            <button ng-click="Minus()">-</button>
+        </div>
     </div>
     <script src="~/app/js/lib/angular.min.js"></script>
     <script src="~/app/js/controller/countries.js"></script>

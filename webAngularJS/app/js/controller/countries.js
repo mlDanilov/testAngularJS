@@ -33,5 +33,21 @@ $scope.Countries = [
 
 ];
 
+$scope.Value = 10;
+
+$scope.GetCountOfCountries = function () {
+    return $scope.Countries.Length;
+}
+
+$scope.Minus = function () {
+    $scope.Value--;
+    console.log($scope.Value);
+}
+
+$scope.Plus = function () {
+    $scope.Value++;
+    console.log($scope.Value);
+}
+
 
 });
