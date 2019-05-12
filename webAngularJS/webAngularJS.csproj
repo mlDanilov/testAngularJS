@@ -91,6 +91,7 @@
   <ItemGroup>
     <Content Include="app\css\city.css" />
     <Content Include="app\js\controller\city.js" />
+    <Content Include="app\js\controller\cityFilter.js" />
     <Content Include="app\js\controller\inherited.js" />
     <Content Include="Global.asax" />
     <Content Include="app\js\lib\angular-mocks.js" />
@@ -115,6 +116,7 @@
     <Content Include="Views\Home\Other.cshtml" />
     <Content Include="Views\Home\Countries.cshtml" />
     <Content Include="Views\Home\CityList.html" />
+    <Content Include="Views\Home\UserFilter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

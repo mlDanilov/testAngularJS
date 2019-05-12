@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserFilter</title>
+</head>
+<body ng-app="worldApp">
+    <div ng-controller="cityController">
+        <!--
+        <div ng-repeat="city in Cities | filter:milleniumFunc">
+          -->  
+        <div ng-repeat="city in Cities | MoreYear:1200">
+            <input name="cityId"
+                   type="radio"
+                   value="{{city.Id}}" /> {{city.Name}} - {{city.Established | millenium:1500 }}
+        </div>
+      
+    </div>
+    <script src="~/app/js/lib/angular.min.js"></script>
+    <script src="~/app/js/controller/country.js"></script>
+    <script src="~/app/js/controller/city.js"></script>
+    <script src="~/app/js/controller/cityFilter.js"></script>
+</body>
+</html>

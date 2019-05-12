@@ -36,6 +36,10 @@ worldApp.controller('cityController', function ($scope) {
         Area: 312679
     }];
 
+    $scope.milleniumFunc = function (city) {
+        return city.Established > 999;
+    }
+
     $scope.Cities = [
         {
             Id: 1,

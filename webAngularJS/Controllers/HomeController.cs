@@ -32,5 +32,10 @@ namespace webAngularJS.Controllers
         {
             return View("Other");
         }
+
+        public ActionResult UserFilter()
+        {
+            return View();
+        }
     }
 }
