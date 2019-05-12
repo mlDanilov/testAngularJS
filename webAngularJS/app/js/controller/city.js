@@ -111,6 +111,10 @@ worldApp.controller('cityController', function ($scope) {
         return 'CityList.html';
     }
 
+    $scope.AddCity = function () {
+
+    }
+
     $scope.somestyle = { background: 'gold', color: '#333' };
     $scope.someclass = "myclass";
 

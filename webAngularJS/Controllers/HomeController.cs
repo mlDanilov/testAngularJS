@@ -37,5 +37,10 @@ namespace webAngularJS.Controllers
         {
             return View();
         }
+
+        public ActionResult AddCity()
+        {
+            return View();
+        }
     }
 }
