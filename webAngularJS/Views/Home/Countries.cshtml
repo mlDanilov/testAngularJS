@@ -2,16 +2,20 @@
 @{
     Layout = null;
 }
-
+<!--
+Здесь демонстрируется фильтрация
+-->
 <!DOCTYPE html>
-
 <html >
 <head>
+    
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/app/css/city.css" />
     <title>Countries</title>
 </head>
-<body ng-app="countriesApp">
-    <div ng-controller="countriesController"> 
+<body ng-app="worldApp">
+    <!--
+    <div ng-controller="countryController"> 
         <div>
             <table>
                 <thead>
@@ -37,32 +41,72 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr ng-repeat="country in Countries">
-                        <td>{{country.Id}}</td>
-                        <td>{{country.Name}}</td>
-                        <td>{{country.Capital}}</td>
+                    <tr ng-repeat="country in Countries" ng-class-odd="'odd'" ng-class-even="'even'">
+                        <td >{{country.Id}}</td>
+                        <td >{{country.Name | uppercase }}</td>
+                        <td>{{country.CapitalId}}</td>
                         <td>{{country.Population}}</td>
                         <td>{{country.Area}}</td>
                     </tr>
                 </tbody>
-             
-
             </table>
         </div>
         <div>
-            <button ng-click="DeleteFirstCountry()">Удалить</button>
+            <button ng-click="DeleteFirstCountry()">Удалить!!!</button>
         </div>
-
     </div>
-    <div ng-controller="countriesController">
-        <div ng-bind="GetCountOfCountries()"></div>
+-->
+    <div ng-controller="cityController">
         <div>
-            {{Value}}
-            <button ng-click="Plus()">+</button>
-            <button ng-click="Minus()">-</button>
+            <input type="text" ng-model="countryId" />
+            <select>
+                <option ng-repeat="city in Cities | filter:{CountryId:countryId}">{{city.Name}}</option>
+            </select>
+        </div>
+        <div>
+            <input ng-model="PropertyMode" type="text" />
+            <label>{{PropertyMode}}</label>
+        </div>
+        <div>
+            <input ng-model="sortparam" type="text" />
+            <label>{{sortparam}}</label>
+        </div>
+        <div ng-switch on="PropertyMode">
+            <div ng-switch-when="Base">
+                <div ng-repeat="city in Cities | orderBy:sortparam">
+                    <input 
+                           ng-click="someEvent01($event)"
+                           name="cityId" 
+                           type="radio" 
+                           value="{{city.Id}}"> {{city.Name}}
+                </div>
+            </div>
+            <div ng-switch-when="Population">
+                <div ng-repeat="city in Cities | orderBy:sortparam">
+                    <input 
+                           ng-click="someEvent01($event)"
+                           name="cityId" 
+                           type="radio" 
+                           value="{{city.Id}}"> {{city.Name}} - {{city.Population | number}}
+                </div>
+            </div>
+            <div ng-switch-when="Established">
+                <div ng-repeat="city in Cities | orderBy:sortparam">
+                    <input 
+                           name="cityId" 
+                           ng-click="someEvent01($event)"
+                           type="radio" 
+                           value="{{city.Id}}"> {{city.Name}} - {{city.Established}} г.
+                </div>
+            </div>
+            <div ng-switch-defalut>
+                Выберите режим: Base, Population, Established
+            </div>
         </div>
     </div>
     <script src="~/app/js/lib/angular.min.js"></script>
-    <script src="~/app/js/controller/countries.js"></script>
+    <script src="~/app/js/controller/country.js"></script>
+    <script src="~/app/js/controller/city.js"></script>
+    
 </body>
 </html>

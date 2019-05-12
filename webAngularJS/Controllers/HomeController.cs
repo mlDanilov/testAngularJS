@@ -27,5 +27,10 @@ namespace webAngularJS.Controllers
             else
                 return View("Other");
         }
+
+        public ActionResult Other()
+        {
+            return View("Other");
+        }
     }
 }
