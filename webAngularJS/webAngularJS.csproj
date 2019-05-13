@@ -111,6 +111,7 @@
     <Content Include="app\js\controller\city.js" />
     <Content Include="app\js\controller\cityFilter.js" />
     <Content Include="app\js\controller\inherited.js" />
+    <Content Include="app\js\directive\cityList.js" />
     <Content Include="Global.asax" />
     <Content Include="app\js\lib\angular-mocks.js" />
     <Content Include="app\js\lib\angular.js" />
@@ -141,6 +142,7 @@
     <Content Include="Views\Home\UserFilter.cshtml" />
     <Content Include="Views\Home\AddCityPanel.cshtml" />
     <Content Include="Views\Home\AddCity.cshtml" />
+    <Content Include="Views\Home\DirectiveCityList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -42,5 +42,10 @@ namespace webAngularJS.Controllers
         {
             return View();
         }
+
+        public ActionResult DirectiveCityList()
+        {
+            return View();
+        }
     }
 }
