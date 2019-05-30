@@ -1,7 +1,7 @@
 ﻿'use strict'
 var worldApp = angular.module('worldApp');
 worldApp.factory('cityService', function ($resource) {
-    return $resource('api/Data/GetCities', {},
+    return $resource('/api/Data/GetCities', {},
         {
             get: {
                 method: 'GET',
