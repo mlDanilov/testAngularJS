@@ -14,7 +14,7 @@
     <title>Countries</title>
 </head>
 <body ng-app="worldApp">
-    <!--
+  
     <div ng-controller="countryController"> 
         <div>
             <table>
@@ -55,7 +55,7 @@
             <button ng-click="DeleteFirstCountry()">Удалить!!!</button>
         </div>
     </div>
--->
+
     <div ng-controller="cityController">
         <div>
             <input type="text" ng-model="countryId" />
@@ -105,8 +105,13 @@
         </div>
     </div>
     <script src="~/app/js/lib/angular.min.js"></script>
+    <script src="~/app/js/lib/angular-resource.js"></script>
+    <script src="~/app/js/lib/angular-resource.min.js"></script>
     <script src="~/app/js/controller/country.js"></script>
     <script src="~/app/js/controller/city.js"></script>
+    <script src="~/app/js/directive/dataService.js"></script>
+    <script src="~/app/js/factory/cityService.js"></script>
+    <script src="~/app/js/factory/countryService.js"></script>
     
 </body>
 </html>

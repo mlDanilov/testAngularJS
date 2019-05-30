@@ -21,11 +21,18 @@
                    type="radio"
                    value="{{city.Id}}" /> {{city.Name}} - {{city.Established}}
         </div>
+        <!--
         @Html.Partial("AddCityPanel")
+            -->
     </div>
     
     <script src="~/app/js/lib/angular.min.js"></script>
+    <script src="~/app/js/lib/angular-resource.js"></script>
+    <script src="~/app/js/lib/angular-resource.min.js"></script>
     <script src="~/app/js/controller/country.js"></script>
     <script src="~/app/js/controller/city.js"></script>
+    <script src="~/app/js/directive/dataService.js"></script>
+    <script src="~/app/js/factory/cityService.js"></script>
+    <script src="~/app/js/factory/countryService.js"></script>
 </body>
 </html>

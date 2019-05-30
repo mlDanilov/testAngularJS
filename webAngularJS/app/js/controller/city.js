@@ -1,12 +1,13 @@
 ﻿var worldApp = angular.module('worldApp');
-worldApp.controller('cityController', function ($scope) {
-    
+worldApp.controller('cityController', function ($scope, dataService) {
+
     $scope.PropertyMode = "Established";
     $scope.sortparam = "Name";
 
     $scope.countryId = {};
 
-    $scope.Countries = [
+    //$scope.Countries = dataService.Countries;
+    /* [
     {
         Id: 1,
         Name: "Россия",
@@ -35,76 +36,17 @@ worldApp.controller('cityController', function ($scope) {
         Population: 38422346,
         Area: 312679
     }];
-
+    */
     $scope.milleniumFunc = function (city) {
         return city.Established > 999;
     }
 
-    $scope.Cities = [
-        {
-            Id: 1,
-            Name: "Москва",
-            CountryId: 1,
-            Population: 12615882,
-            Established: 1147
-        },
-         {
-             Id: 2,
-             CountryId: 3,
-             Name: "Минск",
-             Population: 1992685,
-             Established: 1067
-         }
-         ,
-         {
-             Id: 3,
-             CountryId: 2,
-             Name: "Киев",
-             Population: 2934522,
-             Established: 482
-         }
-         ,
-         {
-             Id: 4,
-             CountryId: 4,
-             Name: "Варшава",
-             Population: 1758143,
-             Established: 1300
-         }
-         ,
-         {
-             Id: 5,
-             CountryId: 1,
-             Name: "Арти",
-             Population: 12997,
-             Established: 1783
-         }
-          ,
-         {
-             Id: 6,
-             CountryId: 1,
-             Name: "Атиг",
-             Population: 3162,
-             Established: 1790
-         }
-          ,
-         {
-             Id: 7,
-             CountryId: 1,
-             Name: "Верхние Серги",
-             Population: 5702,
-             Established: 1742
-         }
-          ,
-         {
-             Id: 8,
-             CountryId: 4,
-             Name: "Краков",
-             Population: 769498,
-             Established: 965
-         }
+    $scope.Cities = dataService.CalcCitiesExt();
 
-    ];
+    $scope.Cities = dataService.CalcCountriesExt();
+    //$scope.Cities = dataService.Cities;
+    //$scope.Cities = remoteDataService.query(function () { });
+
 
 
     $scope.getTemplate = function () {
@@ -121,4 +63,4 @@ worldApp.controller('cityController', function ($scope) {
     $scope.someEvent01 = function ($event) {
         console.log("preved, medved!!!");
     }
-})
+});

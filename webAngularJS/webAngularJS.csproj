@@ -112,11 +112,16 @@
     <Content Include="app\js\controller\cityFilter.js" />
     <Content Include="app\js\controller\inherited.js" />
     <Content Include="app\js\directive\cityList.js" />
+    <Content Include="app\js\directive\dataService.js" />
+    <Content Include="app\js\factory\cityService.js" />
+    <Content Include="app\js\factory\countryService.js" />
     <Content Include="Global.asax" />
     <Content Include="app\js\lib\angular-mocks.js" />
     <Content Include="app\js\lib\angular.js" />
     <Content Include="app\js\lib\angular.min.js" />
     <Content Include="app\js\controller\country.js" />
+    <Content Include="app\js\lib\angular-resource.js" />
+    <Content Include="app\js\lib\angular-resource.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +133,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\ICity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -143,6 +149,9 @@
     <Content Include="Views\Home\AddCityPanel.cshtml" />
     <Content Include="Views\Home\AddCity.cshtml" />
     <Content Include="Views\Home\DirectiveCityList.cshtml" />
+    <Content Include="app\js\lib\angular-resource.min.js.map" />
+    <Content Include="Views\Shared\_Links.cshtml" />
+    <Content Include="Views\Home\Example.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,7 +162,6 @@
   <ItemGroup>
     <Folder Include="app\img\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

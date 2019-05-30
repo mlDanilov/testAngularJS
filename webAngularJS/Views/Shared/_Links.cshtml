@@ -1,25 +1,23 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
-<!--
-Здесь тестим директиву 
--->
+
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>UserFilter</title>
-    <link rel="stylesheet" type="text/css" href="~/app/css/addCity.css" />
-</head>
-<body ng-app="worldApp">
-    <div ng-controller="cityController">
-        <div city-list="Cities"></div>
-    </div>
-
     <script src="~/app/js/lib/angular.min.js"></script>
+    <script src="~/app/js/lib/angular-resource.js"></script>
+    <script src="~/app/js/lib/angular-resource.min.js"></script>
     <script src="~/app/js/controller/country.js"></script>
     <script src="~/app/js/controller/city.js"></script>
-    <script src="~/app/js/directive/cityList.js"></script>
     <script src="~/app/js/directive/dataService.js"></script>
+    <script src="~/app/js/factory/cityService.js"></script>
+    <script src="~/app/js/factory/countryService.js"></script>
+</head>
+<body>
+    @RenderBody()
 </body>
 </html>
