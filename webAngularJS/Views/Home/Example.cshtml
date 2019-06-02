@@ -3,12 +3,15 @@
 }
 <div ng-app="worldApp">
     <div  ng-controller="countryController">
-        <div ng-repeat="country in Countries ">
+        <div ng-repeat="country in Countries">
             <input 
                     name="cityId"
                     type="radio"
-                    value="{{country.Id}}"> {{country.Name}}
+                    value="{{country.Id}}"> {{country.Name}} - {{country.CapitalName}}
+        </div>
+        <div>
+            <input type="button" ng-click="ExampleClick()" value="Тест" />
         </div>
     </div>
-    preved!!!DSfsdf
+  
 </div>

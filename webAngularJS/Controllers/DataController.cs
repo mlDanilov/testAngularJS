@@ -100,18 +100,18 @@ namespace webAngularJS.Controllers
           new Country() {
             Id = 3,
             Name = "Беларусь",
-            СapitalId = 1
+            СapitalId = 2
         },
          new Country() {
             Id = 2,
             Name = "Украина",
-            СapitalId = 1
+            СapitalId = 3
         }
          ,
          new Country() {
             Id = 4,
             Name = "Польша",
-            СapitalId = 1
+            СapitalId = 4
         }
             };
 
