@@ -16,6 +16,12 @@ namespace webAngularJS.Controllers
         {
             return getCities();
         }
+        [HttpPost]
+        public IEnumerable<City> GetCitiesEnum()
+        {
+            return getCities();
+        }
+
         private IEnumerable<City> getCities()
         {
 

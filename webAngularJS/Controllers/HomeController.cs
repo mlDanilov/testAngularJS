@@ -48,6 +48,11 @@ namespace webAngularJS.Controllers
             return View();
         }
 
+        public ActionResult DirectiveCountryList()
+        {
+            return View();
+        }
+
         public ActionResult Example()
         {
             return View();

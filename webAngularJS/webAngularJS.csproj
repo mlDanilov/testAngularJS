@@ -112,9 +112,12 @@
     <Content Include="app\js\controller\cityFilter.js" />
     <Content Include="app\js\controller\inherited.js" />
     <Content Include="app\js\directive\cityList.js" />
-    <Content Include="app\js\directive\dataService.js" />
+    <Content Include="app\js\directive\countryList.js" />
+    <Content Include="app\js\factory\countryFactory.js" />
+    <Content Include="app\js\factory\dataService.js" />
     <Content Include="app\js\factory\cityService.js" />
     <Content Include="app\js\factory\countryService.js" />
+    <Content Include="app\templates\CountryList.html" />
     <Content Include="Global.asax" />
     <Content Include="app\js\lib\angular-mocks.js" />
     <Content Include="app\js\lib\angular.js" />
@@ -122,6 +125,8 @@
     <Content Include="app\js\controller\country.js" />
     <Content Include="app\js\lib\angular-resource.js" />
     <Content Include="app\js\lib\angular-resource.min.js" />
+    <Content Include="app\js\lib\angular-route.js" />
+    <Content Include="app\js\lib\angular-route.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +149,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Other.cshtml" />
     <Content Include="Views\Home\Countries.cshtml" />
-    <Content Include="Views\Home\CityList.html" />
+    <Content Include="app\templates\CityList.html" />
     <Content Include="Views\Home\UserFilter.cshtml" />
     <Content Include="Views\Home\AddCityPanel.cshtml" />
     <Content Include="Views\Home\AddCity.cshtml" />
@@ -152,6 +157,8 @@
     <Content Include="app\js\lib\angular-resource.min.js.map" />
     <Content Include="Views\Shared\_Links.cshtml" />
     <Content Include="Views\Home\Example.cshtml" />
+    <Content Include="Views\Home\DirectiveCountryList.cshtml" />
+    <Content Include="app\js\lib\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -162,6 +169,7 @@
   <ItemGroup>
     <Folder Include="app\img\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
