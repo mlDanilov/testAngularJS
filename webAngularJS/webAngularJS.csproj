@@ -106,12 +106,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app\countryListData.json" />
     <Content Include="app\css\addCity.css" />
     <Content Include="app\css\city.css" />
     <Content Include="app\js\controller\city.js" />
     <Content Include="app\js\controller\cityFilter.js" />
     <Content Include="app\js\controller\inherited.js" />
     <Content Include="app\js\directive\cityList.js" />
+    <Content Include="app\js\directive\compileCountryList.js" />
     <Content Include="app\js\directive\countryList.js" />
     <Content Include="app\js\factory\countryFactory.js" />
     <Content Include="app\js\factory\dataService.js" />

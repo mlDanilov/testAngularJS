@@ -94,10 +94,19 @@ namespace webAngularJS.Controllers
         {
             return getCountries();
         }
+
+        public void AddCountry(Country country)
+        {
+            _countryList.Add(country);
+        }
         private IEnumerable<Country> getCountries()
         {
+            return _countryList;
+        }
 
-            return new Country[] {
+
+        private readonly List<Country> _countryList = new List<Country>(
+            new Country[] {
             new Country() {
             Id = 1,
             Name = "Россия",
@@ -119,8 +128,9 @@ namespace webAngularJS.Controllers
             Name = "Польша",
             СapitalId = 4
         }
-            };
+            }
 
-        }
+
+            );
     }
 }

@@ -4,10 +4,22 @@
 <div ng-app="worldApp">
     <div ng-controller="countryController">
         <!--
-        <div country-list="Countries"></div>
-        -->
         <country-list>preved, Медвед!!!</country-list>
+        -->
+        <compile-country-list>
+
+        </compile-country-list>
+
+        <div>
+
+            <select>
+                <option ng-repeat="country in Countries">
+                    {{country.Id}} - {{country.Name}}
+                </option>
+            </select>
+        </div>
      </div>
+  
 </div>
 
 <script type="text/ng-template" id="CountryList.html">
