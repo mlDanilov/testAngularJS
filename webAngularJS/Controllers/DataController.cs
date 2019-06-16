@@ -94,16 +94,24 @@ namespace webAngularJS.Controllers
         {
             return getCountries();
         }
-
-        public void AddCountry(Country country)
+        [HttpPost]
+        //public void AddCountry(Country country)
+        public void AddCountry([FromBody] CountryParams cParams)
         {
+            int id = _countryList.Max(c => c.Id) + 1;
+            var country = new Country() { Id = id, Name = cParams.Name, СapitalId = -1 };
             _countryList.Add(country);
         }
+        
         private IEnumerable<Country> getCountries()
         {
             return _countryList;
         }
 
+        public class CountryParams {
+
+            public string Name { get; set; }
+        }
 
         private readonly List<Country> _countryList = new List<Country>(
             new Country[] {

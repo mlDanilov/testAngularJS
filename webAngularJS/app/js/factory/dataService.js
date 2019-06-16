@@ -1,7 +1,5 @@
 ﻿'use strict'
-worldApp.factory('dataService', function (cityService, countryService) {
-
-
+worldApp.factory('dataService', function ($http, $q, cityService, countryService) {
 
     return {
 
@@ -67,10 +65,6 @@ worldApp.factory('dataService', function (cityService, countryService) {
 
         },
 
-        //CalcCountriesExt : function() {
-        //    citiesService.get({}, function (data) {
-
-    
         CalcCountriesExt: function (countries, cities) {
 
             let res = [];
@@ -96,6 +90,21 @@ worldApp.factory('dataService', function (cityService, countryService) {
                 res.push(country);
             }
             return res;
+        },
+
+        getData: function ()
+        {
+            var deferred = $q.defer();
+
+            $http({ method: 'GET', url: '/api/Data/GetCountries' }).then
+                (function success(responce) {
+                    deferred.resolve(responce.data);
+                }, function error(responce) {
+                    deferred.reject(responce.data);
+                });
+
+            return deferred.promise;
         }
+
     }
 });
